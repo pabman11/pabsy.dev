@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Typography from "@/components/Typography.astro";
+import Logo from "@/svgs/logo.astro";
 ---
 
 <Layout title="Hola!">
@@ -8,6 +9,8 @@ import Typography from "@/components/Typography.astro";
         <Typography as="p" variant="h2" class:list={"mb-12 text-center"}
             >¡Hola!</Typography
         >
+        <p class="flex place-content-center mb-6"><Logo /></p>
+
         <Typography as="h1" variant="none" class:list={"mb-2 text-center"}
             >Me llamo Pablo y soy desarrollador.</Typography
         >
