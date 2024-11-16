@@ -1,0 +1,39 @@
+---
+import Icon from "./Icon.astro";
+
+const socials = [
+    {
+        name: "GitHub",
+        url: "https://github.com/pabman11",
+        icon: "github",
+    },
+    {
+        name: "LinkedIn",
+        url: "www.linkedin.com/in/pablo-fornali-manzanas",
+        icon: "linkedin",
+    },
+    {
+        name: "Bluesky",
+        url: "https://bsky.app/profile/pabsy.dev",
+        icon: "bluesky",
+    },
+];
+---
+
+<ul class="flex space-x-4 justify-center mt-8">
+    {
+        socials.map(({ name, url, icon }) => (
+            <li>
+                <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white"
+                    title={name}
+                >
+                    <Icon icon={icon} />
+                </a>
+            </li>
+        ))
+    }
+</ul>

@@ -1,21 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Tile from "@/components/Tile.astro";
 import Typography from "@/components/Typography.astro";
+
+import Socials from "@/components/Socials.astro";
 import Logo from "@/svgs/logo.astro";
 ---
 
 <Layout title="Hola!">
-    <main>
-        <Typography as="p" variant="h2" class:list={"mb-12 text-center"}
-            >¡Hola!</Typography
-        >
-        <p class="flex place-content-center mb-6"><Logo /></p>
+    <main
+        class="w-screen h-screen bg-black overflow-hidden grid grid-cols-2 grid-rows-2"
+    >
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
 
-        <Typography as="h1" variant="none" class:list={"mb-2 text-center"}
-            >Me llamo Pablo y soy desarrollador.</Typography
+        <div
+            class:list={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-1/2 h-1/2 border-4 border-white bg-black p-8"}
         >
-        <Typography as="h3" variant="none" class:list={"mb-12 text-center"}
-            >Y esto es el inicio de mi página web.</Typography
-        >
+            <Typography
+                as="h1"
+                variant="h1"
+                class:list={"text-white text-center"}
+            >
+                Hola Mundo! 🌍
+            </Typography>
+            <Typography
+                as="p"
+                variant="p"
+                class:list={"text-white text-center text-xl mt-2"}
+            >
+                Soy Pablo, un desarrollador web especializado en PHP, CSS y
+                JavaScript. Aunque también me gusta experimentar con otros
+                lenguajes y tecnologías.
+            </Typography>
+
+            <Typography
+                as="h2"
+                variant="h2"
+                class:list={"text-white text-center border-b border-white pb-2 mt-4"}
+            >
+                Mis redes
+            </Typography>
+
+            <Socials />
+        </div>
     </main>
 </Layout>
