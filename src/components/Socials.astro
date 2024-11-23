@@ -28,10 +28,13 @@ const socials = [
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-white"
+                    class={`text-white`}
                     title={name}
                 >
-                    <Icon icon={icon} />
+                    <Icon
+                        icon={icon}
+                        hoverColor={`hover:fill-${icon} hover:stroke-${icon}`}
+                    />
                 </a>
             </li>
         ))
