@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 import Tile from "@/components/Tile.astro";
 import Typography from "@/components/Typography.astro";
 
@@ -11,40 +11,85 @@ import Logo from "@/svgs/logo.astro";
     <main
         class="w-screen h-screen bg-black overflow-hidden grid grid-cols-2 grid-rows-2"
     >
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
+        <Tile onHoverColor="hover:bg-red-500" tile="1">
+            <div>
+                <Typography
+                    as="h1"
+                    variant="h1"
+                    class:list={"text-white text-center mt-8"}
+                >
+                    Blog! 📝
+                </Typography>
+            </div>
+        </Tile>
+        <Tile onHoverColor="hover:bg-green-500" tile="2">
+            <div>
+                <Typography
+                    as="h1"
+                    variant="h1"
+                    class:list={"text-white text-center mt-8"}
+                >
+                    Proyectos! 🛠️
+                </Typography>
+            </div>
+        </Tile>
+        <Tile onHoverColor="hover:bg-blue-500" tile="3">
+            <div>
+                <Typography
+                    as="h1"
+                    variant="h1"
+                    class:list={"text-white text-center mt-8"}
+                >
+                    Contacto! 📧
+                </Typography>
+            </div>
+        </Tile>
+        <Tile onHoverColor="hover:bg-orange-500" tile="4">
+            <div>
+                <Typography
+                    as="h1"
+                    variant="h1"
+                    class:list={"text-white text-center mt-8"}
+                >
+                    Pabsy! 🧑‍💻
+                </Typography>
+            </div>
+        </Tile>
 
         <div
+            id="center"
             class:list={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-1/2 h-1/2 border-4 border-white bg-black p-8"}
         >
-            <Typography
-                as="h1"
-                variant="h1"
-                class:list={"text-white text-center"}
-            >
-                Hola Mundo! 🌍
-            </Typography>
-            <Typography
-                as="p"
-                variant="p"
-                class:list={"text-white text-center text-xl mt-2"}
-            >
-                Soy Pablo, un desarrollador web especializado en PHP, CSS y
-                JavaScript. Aunque también me gusta experimentar con otros
-                lenguajes y tecnologías.
-            </Typography>
+            <div>
+                <Typography
+                    as="h1"
+                    variant="h1"
+                    class:list={"text-white text-center"}
+                >
+                    Hola Mundo! 🌍
+                </Typography>
+                <Typography
+                    as="p"
+                    variant="p"
+                    class:list={"text-white text-center text-xl mt-2"}
+                >
+                    Soy Pablo, un desarrollador web especializado en PHP, CSS y
+                    JavaScript. Aunque también me gusta experimentar con otros
+                    lenguajes y tecnologías.
+                </Typography>
 
-            <Typography
-                as="h2"
-                variant="h2"
-                class:list={"text-white text-center border-b border-white pb-2 mt-4"}
-            >
-                Mis redes
-            </Typography>
+                <Typography
+                    as="h2"
+                    variant="h2"
+                    class:list={"text-white text-center border-b border-white pb-2 mt-4"}
+                >
+                    Mis redes
+                </Typography>
 
-            <Socials />
+                <Socials />
+            </div>
         </div>
     </main>
 </Layout>
+
+<script></script>

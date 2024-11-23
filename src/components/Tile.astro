@@ -1,12 +1,34 @@
 ---
-const bgColors = [
-    "hover:bg-red-700",
-    "hover:bg-blue-700",
-    "hover:bg-green-700",
-    "hover:bg-yellow-700",
-];
+const tile = Astro.props.tile;
 
-const randomColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+const onHoverColor = Astro.props.onHoverColor || "hover:bg-gray-100";
 ---
 
-<div class:list={"outline outline-white h-full w-full " + randomColor}></div>
+<div
+    class:list={`tile cursor-pointer outline outline-white h-full w-full p-8 ${onHoverColor}`}
+    data-tile={tile}
+>
+    <slot />
+</div>
+<script>
+    const tiles = document.querySelectorAll("div.tile");
+
+    // Handle clicks on each button.
+    tiles.forEach((tile) => {
+        tile.addEventListener("click", (event) => {
+            handleClick(event);
+        });
+    });
+    const handleClick = (ev) => {
+        const tile = ev.target;
+        const tileContent = tile;
+
+        const duplicate = tileContent.cloneNode(true);
+
+        const center = document.getElementById("center");
+        const duplicateCenter = center.cloneNode(true);
+
+        center.innerHTML = duplicate.innerHTML;
+        tile.innerHTML = duplicateCenter.innerHTML;
+    };
+</script>
