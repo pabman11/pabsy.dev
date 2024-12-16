@@ -9,47 +9,47 @@ import Logo from "@/svgs/logo.astro";
 
 <Layout title="Hola!">
     <main
-        class="w-screen h-screen bg-black overflow-hidden grid grid-cols-2 grid-rows-2"
+        class="w-screen h-screen bg-black overflow-hidden flex flex-col md:grid md:grid-cols-2 md:grid-rows-2"
     >
         <Tile onHoverColor="hover:bg-red-500" tile="1">
-            <div>
+            <div class="lateral-block">
                 <Typography
-                    as="h1"
+                    as="h2"
                     variant="h1"
-                    class:list={"text-white text-center mt-8"}
+                    class:list={"text-white text-center md:mt-8"}
                 >
                     Blog! 📝
                 </Typography>
             </div>
         </Tile>
         <Tile onHoverColor="hover:bg-green-500" tile="2">
-            <div>
+            <div class="lateral-block">
                 <Typography
-                    as="h1"
+                    as="h2"
                     variant="h1"
-                    class:list={"text-white text-center mt-8"}
+                    class:list={"text-white text-center md:mt-8"}
                 >
                     Proyectos! 🛠️
                 </Typography>
             </div>
         </Tile>
         <Tile onHoverColor="hover:bg-blue-500" tile="3">
-            <div>
+            <div class="lateral-block">
                 <Typography
-                    as="h1"
+                    as="h2"
                     variant="h1"
-                    class:list={"text-white text-center mt-8"}
+                    class:list={"text-white text-center md:mt-8"}
                 >
                     Contacto! 📧
                 </Typography>
             </div>
         </Tile>
         <Tile onHoverColor="hover:bg-orange-500" tile="4">
-            <div>
+            <div class="lateral-block">
                 <Typography
-                    as="h1"
+                    as="h2"
                     variant="h1"
-                    class:list={"text-white text-center mt-8"}
+                    class:list={"text-white text-center md:mt-8"}
                 >
                     Pabsy! 🧑‍💻
                 </Typography>
@@ -58,9 +58,9 @@ import Logo from "@/svgs/logo.astro";
 
         <div
             id="center"
-            class:list={"absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-1/2 h-1/2 border-4 border-white bg-black p-8"}
+            class:list={`order-1 md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-10 w-full md:w-1/2 h-full md:h-1/2 border-4 border-white bg-black p-8`}
         >
-            <div>
+            <div class="centered-block">
                 <Typography
                     as="h1"
                     variant="h1"

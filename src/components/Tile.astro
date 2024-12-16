@@ -5,7 +5,7 @@ const onHoverColor = Astro.props.onHoverColor || "hover:bg-gray-100";
 ---
 
 <div
-    class:list={`tile cursor-pointer outline outline-white h-full w-full p-8 ${onHoverColor}`}
+    class:list={`tile cursor-pointer outline outline-white md:h-full max-h-8 md:max-h-full overflow-hidden md:overflow-visible w-full p-8 ${onHoverColor} order-2`}
     data-tile={tile}
 >
     <slot />
@@ -23,12 +23,12 @@ const onHoverColor = Astro.props.onHoverColor || "hover:bg-gray-100";
         const tile = ev.target;
         const tileContent = tile;
 
-        const duplicate = tileContent.cloneNode(true);
+        const duplicateTile = tileContent.cloneNode(true);
 
         const center = document.getElementById("center");
         const duplicateCenter = center.cloneNode(true);
 
-        center.innerHTML = duplicate.innerHTML;
+        center.innerHTML = duplicateTile.innerHTML;
         tile.innerHTML = duplicateCenter.innerHTML;
     };
 </script>
