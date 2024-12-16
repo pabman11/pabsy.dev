@@ -20,7 +20,16 @@ const onHoverColor = Astro.props.onHoverColor || "hover:bg-gray-100";
         });
     });
     const handleClick = (ev) => {
-        const tile = ev.target;
+        ev.preventDefault();
+        ev.stopPropagation();
+        let tile = ev.target;
+        while (tile && !tile.classList.contains("tile")) {
+            tile = tile.parentElement;
+        }
+        if (!tile) {
+            return;
+        }
+
         const tileContent = tile;
 
         const duplicateTile = tileContent.cloneNode(true);
