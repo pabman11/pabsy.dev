@@ -23,7 +23,7 @@ import Logo from "@/svgs/logo.astro";
             </div>
         </Tile>
         <Tile onHoverColor="hover:bg-green-500" tile="2">
-            <div class="lateral-block">
+            <div class="lateral-block p-4">
                 <Typography
                     as="h2"
                     variant="h1"
@@ -31,6 +31,23 @@ import Logo from "@/svgs/logo.astro";
                 >
                     Proyectos! 🛠️
                 </Typography>
+                <Typography
+                    as="p"
+                    variant="p"
+                    class:list={"text-white text-center text-xl mt-2"}
+                >
+                    Aquí encontrarás algunos de mis proyectos personales y
+                    profesionales.
+                </Typography>
+                <ul class:list={"text-white list-disc mt-4"}>
+                    <li>
+                        <p class:list={"text-white mt-2"}>
+                            <a target="_blank" href="https://martafornali.com">
+                                https://martafornali.com || 🎵 Marta Fornali
+                            </a> - Landing page para la cantante Marta Fornali.
+                        </p>
+                    </li>
+                </ul>
             </div>
         </Tile>
         <Tile onHoverColor="hover:bg-blue-500" tile="3">
@@ -41,6 +58,18 @@ import Logo from "@/svgs/logo.astro";
                     class:list={"text-white text-center md:mt-8"}
                 >
                     Contacto! 📧
+                </Typography>
+
+                <Typography
+                    as="p"
+                    variant="p"
+                    class:list={"text-white text-center text-xl mt-2"}
+                >
+                    Si quieres contactar conmigo, puedes hacerlo a través de
+                    cualquiera de mis redes sociales o enviándome un correo
+                    electrónico a <a href="mailto:hola@pabsy.dev">
+                        hola@pabsy.dev
+                    </a>
                 </Typography>
             </div>
         </Tile>
